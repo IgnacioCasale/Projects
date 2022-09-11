@@ -1,0 +1,269 @@
+// app global css in SCSS form
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+@font-face {
+  font-family: GlacialR;
+  src: url(../assets/GlacialIndifference-Regular.otf);
+}
+
+@font-face {
+  font-family: GlacialB;
+  src: url(../assets/GlacialIndifference-Bold.otf);
+}
+
+//Variable to change the scale of the letter
+:root {
+  --appFontScale: 100%;
+}
+
+html{
+  //no scroll bar------------------
+  ::-webkit-scrollbar {
+    width: 0px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: rgba($color: #000000, $alpha: 0.0);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: rgba($color: #000000, $alpha: 0.0);
+    border-radius: 100px;
+  }
+  //--------------------
+
+  //sets the base letter (100% = 16 pixeles)
+  font-size: var(--appFontScale);
+}
+
+
+body {
+  font-family: "GlacialR", "GlacialB", "Bebas Neue", "Montserrat";
+  background-color: $background;
+  //16 pixels, but relative to html element
+  font-size: 1rem;
+
+
+}
+
+body.body--light{
+  .settingsPanel{
+    .text-negative{
+      color: $background-dark !important;
+    }
+
+    .q-field--error .q-field__bottom{
+      color: $background-dark !important;
+
+    }
+  }
+
+  .q-dialog{
+    .btnCancel{
+      background-color: $primary !important;
+      color: $white;
+    }
+  }
+
+  .q-notifications{
+
+    .bg-negative{
+      .q-icon{
+        color: $dark;
+      }
+      .q-notification__message{
+        color: $dark;
+      }
+    }
+
+  }
+
+  .formClass{
+    .text-negative{
+        color: $background-dark !important;
+    }
+      
+    .q-field--error .q-field__bottom{
+      color: $background-dark !important;
+
+    }
+  }
+
+  .q-carousel{
+    .text-negative{
+      color: $background-dark !important;
+    }
+    
+   .q-field--error .q-field__bottom{
+      color: $background-dark !important;
+
+   }
+  }
+
+    .text-negative{
+      color: $background-dark !important;
+    }
+    
+   .q-field--error .q-field__bottom{
+      color: $background-dark !important;
+      font-size: $small14 !important;
+   }
+  
+}
+
+//To control dark theme------------------------------------------------------
+body.body--dark {
+  font-family: "GlacialR", "GlacialB", "Bebas Neue", "Montserrat";
+  background-color: $background-dark;
+  color: $white;
+
+  
+ .q-field--error .q-field__bottom{
+    font-size: $small14 !important;
+ }
+
+  //Auth
+  .my-card{
+    background-color: $background-dark;
+    color: $white;
+    .title{
+      color: $white;
+    }
+  }
+
+  .carousel{
+    background: $background-dark !important;
+    .q-btn{
+      color: $white;
+    }
+    input{
+      color: $white;
+    }
+
+  }
+
+  .text-primary {
+    color: $white !important;
+  }
+
+  .text-amber{
+    color: $white !important;
+  }
+
+  .formClass{
+    background-color: $background-dark;
+  }
+
+  //Home
+  .imageSection3 {
+    content: url("../assets/home3-dark.svg");
+  }
+
+  //Layout
+  .sideBar{
+    background: $primary !important;
+    .link{
+      color: $white;
+    }
+    .btn-close{
+      color: $white;
+    }
+
+    .circle {
+      border: 2px solid $white;
+    }
+    
+    .circle-active {
+      border: 3px solid $white;
+    }
+  
+    .btn-close {
+      background-color: rgba($primary, 0.5);
+    }
+
+    .linkActive {
+      background-color: $background-dark;
+      color: #f8f8f8;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 15px;
+    }
+  }
+
+
+  //Admin 
+  .btnAddClass{
+    background-color: $background-dark ;
+ 
+  }
+
+  .cardUser{
+    .infoData{
+      color: $dark;
+    }
+  }
+
+  .userTable {
+    .cursor-pointer{
+      background-color: $primary;
+    }
+
+    .q-table__top, tr{
+      background-color: $background-dark;
+    }
+
+    .cursor-pointer:hover {
+      background-color: $background-dark;
+    }
+   
+  }
+
+
+  //general
+  h6{
+    color: $white;
+  }
+
+  //Chats
+
+  .inputMessage{
+    color: $white !important;
+
+    .q-btn__content > i {
+      color: $secondary;
+    }
+  
+    .q-field__control {
+      color: $white !important;
+      background-color: $background-dark;
+    }
+  }
+
+  .tableChat{
+    .q-field__control {
+      background-color: $background-dark !important;
+    }
+  }
+
+  //dialog
+  .q-dialog .q-card{
+    background-color: $background-dark;
+    border: 2px solid $negative;
+    padding: 5px;
+  }
+
+  //settings
+  .q-tab__label {
+    color: $white;
+  }
+  .q-tab__icon{
+    color: $white;
+  }
+}
+//END control dark theme------------------------------------------------------
+
+
+//all layout background
+.sideBar {
+  background: $background !important;
+}
